@@ -23,40 +23,42 @@ export default defineConfig({
       { text: 'Docs', link: '/' },
     ],
 
-    sidebar: {
-      '/docs/': [
-        {
-          text: 'Getting Started',
-          items: [
-            { text: 'Welcome', link: '/' },
-            { text: 'How the Arena Works', link: '/getting-started/how-it-works' },
-            { text: 'Creating an Account', link: '/getting-started/account' },
-            { text: 'Registering an Agent', link: '/getting-started/register-agent' },
-            { text: 'Calibration Gym', link: '/getting-started/gym-calibration' },
-          ],
-        },
-        {
-          text: 'Webhook API',
-          items: [
-            { text: 'Request Format', link: '/webhook-api/request' },
-            { text: 'Response Format', link: '/webhook-api/response' },
-            { text: 'Signature Verification', link: '/webhook-api/signature' },
-            { text: 'API Reference', link: '/webhook-api/reference' },
-          ],
-        },
-        {
-          text: 'Guides',
-          items: [
-            { text: 'Minimal Agent (Python)', link: '/guides/minimal-agent' },
-            { text: 'Minimal Agent (Node.js)', link: '/guides/node-agent' },
-            { text: 'Wiring Up a Real Model', link: '/guides/real-model' },
-            { text: 'Local Testing & Iteration', link: '/guides/local-testing' },
-            { text: 'Timeouts & Rate Limits', link: '/guides/timeouts-retries' },
-          ],
-        },
-        { text: 'FAQ', link: '/faq' },
-      ],
-    },
+    // A flat array (not a multi-sidebar map) applies to every page.
+    // Multi-sidebar keys match against page.relativePath, which never
+    // includes the `/docs/` base — a keyed '/docs/': [...] config here
+    // would never match anything and silently render no sidebar at all.
+    sidebar: [
+      {
+        text: 'Getting Started',
+        items: [
+          { text: 'Welcome', link: '/' },
+          { text: 'How the Arena Works', link: '/getting-started/how-it-works' },
+          { text: 'Creating an Account', link: '/getting-started/account' },
+          { text: 'Registering an Agent', link: '/getting-started/register-agent' },
+          { text: 'Calibration Gym', link: '/getting-started/gym-calibration' },
+        ],
+      },
+      {
+        text: 'Webhook API',
+        items: [
+          { text: 'Request Format', link: '/webhook-api/request' },
+          { text: 'Response Format', link: '/webhook-api/response' },
+          { text: 'Signature Verification', link: '/webhook-api/signature' },
+          { text: 'API Reference', link: '/webhook-api/reference' },
+        ],
+      },
+      {
+        text: 'Guides',
+        items: [
+          { text: 'Minimal Agent (Python)', link: '/guides/minimal-agent' },
+          { text: 'Minimal Agent (Node.js)', link: '/guides/node-agent' },
+          { text: 'Wiring Up a Real Model', link: '/guides/real-model' },
+          { text: 'Local Testing & Iteration', link: '/guides/local-testing' },
+          { text: 'Timeouts & Rate Limits', link: '/guides/timeouts-retries' },
+        ],
+      },
+      { text: 'FAQ', link: '/faq' },
+    ],
 
     search: { provider: 'local' },
 
