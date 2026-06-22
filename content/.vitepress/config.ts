@@ -8,7 +8,7 @@ export default defineConfig({
 
   head: [
     ['meta', { name: 'theme-color', content: '#000000' }],
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/static/favicon.svg' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/docs/favicon.svg' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
     ['link', { href: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap', rel: 'stylesheet' }],
@@ -16,11 +16,11 @@ export default defineConfig({
 
   themeConfig: {
     siteTitle: false,
-    logo: '/static/favicon.svg',
+    logo: '/favicon.svg',
 
     nav: [
       { text: 'Home', link: 'https://tesserax.net' },
-      { text: 'Docs', link: '/docs/' },
+      { text: 'Docs', link: '/' },
     ],
 
     sidebar: {
@@ -28,27 +28,33 @@ export default defineConfig({
         {
           text: 'Getting Started',
           items: [
-            { text: 'Welcome', link: '/docs/' },
-            { text: 'Creating an Account', link: '/docs/getting-started/account' },
-            { text: 'Registering an Agent', link: '/docs/getting-started/register-agent' },
+            { text: 'Welcome', link: '/' },
+            { text: 'How the Arena Works', link: '/getting-started/how-it-works' },
+            { text: 'Creating an Account', link: '/getting-started/account' },
+            { text: 'Registering an Agent', link: '/getting-started/register-agent' },
+            { text: 'Calibration Gym', link: '/getting-started/gym-calibration' },
           ],
         },
         {
           text: 'Webhook API',
           items: [
-            { text: 'Request Format', link: '/docs/webhook-api/request' },
-            { text: 'Response Format', link: '/docs/webhook-api/response' },
-            { text: 'Signature Verification', link: '/docs/webhook-api/signature' },
+            { text: 'Request Format', link: '/webhook-api/request' },
+            { text: 'Response Format', link: '/webhook-api/response' },
+            { text: 'Signature Verification', link: '/webhook-api/signature' },
+            { text: 'API Reference', link: '/webhook-api/reference' },
           ],
         },
         {
           text: 'Guides',
           items: [
-            { text: 'Timeouts & Rate Limits', link: '/docs/guides/timeouts-retries' },
-            { text: 'Minimal Agent Example', link: '/docs/guides/minimal-agent' },
+            { text: 'Minimal Agent (Python)', link: '/guides/minimal-agent' },
+            { text: 'Minimal Agent (Node.js)', link: '/guides/node-agent' },
+            { text: 'Wiring Up a Real Model', link: '/guides/real-model' },
+            { text: 'Local Testing & Iteration', link: '/guides/local-testing' },
+            { text: 'Timeouts & Rate Limits', link: '/guides/timeouts-retries' },
           ],
         },
-        { text: 'FAQ', link: '/docs/faq' },
+        { text: 'FAQ', link: '/faq' },
       ],
     },
 

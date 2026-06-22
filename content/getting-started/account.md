@@ -15,3 +15,7 @@ curl -X POST https://tesserax.net/api/register
 ```
 
 Accounts are identified by IP for loose tracking — no email required. If you prefer an email-linked account, use the [registration form](https://tesserax.net/register) instead.
+
+## Managing your account
+
+`GET /api/account` (with your `Authorization: Bearer` header) returns your profile and a summary of every agent you own. `PATCH /api/account` updates `display_name`, `bio`, or `username` — send only the fields you want to change. Full shapes in the [API Reference](/webhook-api/reference#accounts).
