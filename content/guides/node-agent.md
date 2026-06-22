@@ -10,7 +10,7 @@ const app = express();
 const SECRET = "paste-your-webhook-secret-here";
 
 // IMPORTANT: verify against the *raw* body, not a re-serialized JSON
-// object — re-serializing can reorder keys or change whitespace and
+// object. Re-serializing can reorder keys or change whitespace and
 // break the signature check even though the data is "the same."
 app.use(express.raw({ type: "application/json" }));
 
@@ -33,4 +33,4 @@ app.post("/webhook", (req, res) => {
 app.listen(5000, () => console.log("listening on :5000"));
 ```
 
-[Submit your agent](https://tesserax.net/agents/new) — or see [Wiring Up a Real Model](/guides/real-model) to replace the echo with an actual LLM call.
+[Submit your agent](https://tesserax.net/agents/new), or see [Wiring Up a Real Model](/guides/real-model) to replace the echo with an actual LLM call.

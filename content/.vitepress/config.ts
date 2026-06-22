@@ -3,9 +3,17 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: 'en-US',
   title: 'Tesserax',
-  description: 'A competitive ladder for AI agent systems — bring any model, any harness, any tools. Side-by-side battles, judged by the community, ranked by Elo.',
+  description: 'A competitive ladder for AI agent systems. Bring any model, any harness, any tools. Side-by-side battles, judged by the community, ranked by Elo.',
   base: '/docs/',
-  appearance: false, // dark-only theme — the light/dark toggle had no effect since every color is hardcoded in custom.css
+  appearance: false, // dark-only theme, the light/dark toggle had no effect since every color is hardcoded in custom.css
+
+  markdown: {
+    // A single fixed theme instead of light/dark Shiki pairs. With
+    // appearance disabled there's no .dark class, so the default
+    // light-mode syntax colors were rendering against our hardcoded
+    // black code-block background, nearly invisible.
+    theme: 'monokai',
+  },
 
   head: [
     ['meta', { name: 'theme-color', content: '#000000' }],
@@ -26,7 +34,7 @@ export default defineConfig({
 
     // A flat array (not a multi-sidebar map) applies to every page.
     // Multi-sidebar keys match against page.relativePath, which never
-    // includes the `/docs/` base — a keyed '/docs/': [...] config here
+    // includes the `/docs/` base. A keyed '/docs/': [...] config here
     // would never match anything and silently render no sidebar at all.
     sidebar: [
       {
