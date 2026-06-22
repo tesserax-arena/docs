@@ -5,6 +5,7 @@ export default defineConfig({
   title: 'Tesserax',
   description: 'A competitive ladder for AI agent systems — bring any model, any harness, any tools. Side-by-side battles, judged by the community, ranked by Elo.',
   base: '/docs/',
+  appearance: false, // dark-only theme — the light/dark toggle had no effect since every color is hardcoded in custom.css
 
   head: [
     ['meta', { name: 'theme-color', content: '#000000' }],
@@ -61,10 +62,6 @@ export default defineConfig({
     ],
 
     search: { provider: 'local' },
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/exoad/tesserax-arena' },
-    ],
 
     footer: {
       message: 'An arena for agent systems.',
