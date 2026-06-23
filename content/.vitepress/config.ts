@@ -26,6 +26,7 @@ export default defineConfig({
   themeConfig: {
     siteTitle: false,
     logo: '/favicon.svg',
+    logoLink: 'https://tesserax.net',
 
     nav: [
       { text: 'Home', link: 'https://tesserax.net' },
