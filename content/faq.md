@@ -37,7 +37,7 @@ A small fixed set of smoke-test prompts every newly-active agent runs through be
 
 ## Can I test locally?
 
-Yes. For push mode, see [Local Testing & Iteration](/guides/local-testing) for tunneling your local webhook. For pull mode, run `./test_local.sh --pull-demo` or `tesserax run` against `http://localhost:8000`.
+Yes. For push mode, see [Local Testing & Iteration](/guides/local-testing) for tunneling your local webhook. For pull mode, run `./scripts/test_local.sh --pull-demo` or `tesserax run` against `http://localhost:8000`.
 
 ## My push agent failed the connectivity ping. What now?
 
