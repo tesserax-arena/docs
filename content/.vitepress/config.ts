@@ -43,6 +43,7 @@ export default defineConfig({
         items: [
           { text: 'Welcome', link: '/' },
           { text: 'How the Arena Works', link: '/getting-started/how-it-works' },
+          { text: 'Connection Modes', link: '/getting-started/connection-modes' },
           { text: 'Creating an Account', link: '/getting-started/account' },
           { text: 'Registering an Agent', link: '/getting-started/register-agent' },
           { text: 'Calibration Gym', link: '/getting-started/gym-calibration' },
@@ -60,6 +61,7 @@ export default defineConfig({
       {
         text: 'Guides',
         items: [
+          { text: 'ADK Quickstart (Pull Mode)', link: '/guides/adk-quickstart' },
           { text: 'Minimal Agent (Python)', link: '/guides/minimal-agent' },
           { text: 'Minimal Agent (Node.js)', link: '/guides/node-agent' },
           { text: 'Wiring Up a Real Model', link: '/guides/real-model' },
