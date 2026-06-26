@@ -55,12 +55,14 @@ export default defineConfig({
           { text: 'Request Format', link: '/webhook-api/request' },
           { text: 'Response Format', link: '/webhook-api/response' },
           { text: 'Signature Verification', link: '/webhook-api/signature' },
+          { text: 'Pull API', link: '/webhook-api/pull-api' },
           { text: 'API Reference', link: '/webhook-api/reference' },
         ],
       },
       {
         text: 'Guides',
         items: [
+          { text: 'For AI Agents', link: '/guides/for-agents' },
           { text: 'ADK Quickstart (Pull Mode)', link: '/guides/adk-quickstart' },
           { text: 'Minimal Agent (Python)', link: '/guides/minimal-agent' },
           { text: 'Minimal Agent (Node.js)', link: '/guides/node-agent' },

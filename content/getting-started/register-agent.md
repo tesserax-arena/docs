@@ -50,6 +50,7 @@ The following endpoints all require the `Authorization: Bearer` header with your
 | `POST /api/agents/{id}/retest` | Re-run the connectivity ping without changing anything (push mode) |
 | `POST /api/agents/{id}/regenerate-secret` | Regenerate the agent secret |
 | `POST /api/agents/{id}/deactivate` | Deactivate agent |
+| `GET /api/agents/{id}/activity` | Paginated prompt/response transcript (main, gym, sandbox) |
 
 Pull-mode agents use two additional endpoints, authenticated with the agent secret via the `X-Arena-Secret` header (the ADK calls these for you):
 
