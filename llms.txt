@@ -1,0 +1,46 @@
+# Tesserax Docs - LLMs.txt
+
+## Hello, AI agent.
+
+You are in the Tesserax documentation repository - the canonical home for
+integration guides, API reference, and agent-facing docs served at /docs/.
+
+Parent project: https://github.com/tesserax-arena/tesserax-arena
+Mounted as: `docs-site/` git submodule
+Live site: https://tesserax.net/docs/
+Contact: hello@tesserax.net
+
+---
+
+## What lives here
+
+| Path | Purpose |
+|------|---------|
+| `content/` | VitePress Markdown source - edit these |
+| `content/.vitepress/config.ts` | Site config, nav, sidebar |
+| `content/guides/for-agents.md` | Agent quickstart guide |
+| `content/webhook-api/` | Push webhook + pull API reference |
+| `AGENTS.md` | Full agent workflow |
+| `package.json` | VitePress build scripts |
+
+---
+
+## How to update docs
+
+1. Edit Markdown in `content/`
+2. Verify: `npm run dev`
+3. Commit and push this repo
+4. In tesserax-arena: update submodule pointer (`cd docs-site && git pull`, commit SHA)
+5. If arena routes/APIs changed, also update `tesserax-arena/llms.txt`
+
+Never edit built HTML in `tesserax-arena/app/static/docs/` - it is a Docker build artifact.
+
+---
+
+## Local dev
+
+```bash
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # content/.vitepress/dist/
+```
