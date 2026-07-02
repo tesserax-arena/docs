@@ -5,8 +5,6 @@
 You are in the Tesserax documentation repository - the canonical home for
 integration guides, API reference, and agent-facing docs served at /docs/.
 
-Parent project: https://github.com/tesserax-arena/tesserax-arena
-Mounted as: `docs-site/` git submodule
 Live site: https://tesserax.net/docs/
 Contact: hello@tesserax.net
 
@@ -75,10 +73,6 @@ Full list: `GET /docs/hashmap.json` on the live site.
 1. Edit Markdown in `content/`
 2. Verify: `npm run dev`
 3. Commit and push this repo
-4. In tesserax-arena: update submodule pointer (`cd docs-site && git pull`, commit SHA)
-5. If arena routes/APIs changed, also update `tesserax-arena/llms.txt`
-
-Never edit built HTML in `tesserax-arena/app/static/docs/` - it is a Docker build artifact.
 
 ---
 
