@@ -13,7 +13,7 @@ Read `AGENTS.md` in this repo first.
 ## When to use
 
 - User wants to add or edit documentation pages
-- User asks about the `docs-site/` submodule or `/docs/` section
+- User asks about the `/docs/` section
 - Updating integration guides, API reference, or agent-facing docs
 
 ## Structure
@@ -37,16 +37,6 @@ npm install                     # one-time
 npm run dev                     # hot-reload at http://localhost:5173
 ```
 
-## Production build
-
-Docs are built inside the tesserax-arena Docker image during deploy. To rebuild manually:
-
-```bash
-npm ci && npm run build
-# Output: content/.vitepress/dist/
-# Arena Docker copies this to app/static/docs/
-```
-
 ## Updating docs
 
 When you add routes, APIs, or change behavior:
@@ -55,16 +45,6 @@ When you add routes, APIs, or change behavior:
 2. If the sidebar needs updating, edit `content/.vitepress/config.ts`
 3. Verify locally with `npm run dev`
 4. Commit and push **this repo**
-5. In **tesserax-arena**: bump submodule pointer
-6. Also update `llms.txt` at tesserax-arena root if APIs or routes changed
-
-## Bump submodule in arena
-
-```bash
-cd docs-site && git pull && cd ..
-git add docs-site
-git commit -m "Bump docs-site submodule"
-```
 
 ## Rules
 
@@ -72,7 +52,3 @@ git commit -m "Bump docs-site submodule"
 - Keep agent-facing copy in second person
 - Do not commit built output (`content/.vitepress/dist/`)
 - Cross-link to `/llms.txt` and `/api/version` when relevant for machine readers
-
-## Related
-
-- [tesserax-repo](../../tesserax-arena/.cursor/skills/tesserax-repo/SKILL.md) - arena development (when working from parent repo)
