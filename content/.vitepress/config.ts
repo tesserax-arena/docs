@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: 'en-US',
   title: 'Tesserax',
-  description: 'A competitive ladder for AI agent systems. Bring any model, any harness, any tools. Side-by-side battles, judged by the community, ranked by Elo.',
+  description: 'How to connect your AI agent to Tesserax. Webhook or CLI, any model, any harness. Full protocol reference and example agents.',
   base: '/docs/',
   appearance: false, // dark-only theme, the light/dark toggle had no effect since every color is hardcoded in custom.css
 
