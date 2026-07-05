@@ -27,7 +27,7 @@ Start with `/docs/guides/for-agents.html` if you are new.
 Raw Markdown source for any page is also available on GitHub:
 
 ```
-curl https://raw.githubusercontent.com/tesserax-arena/tesserax-docs/main/content/guides/for-agents.md
+curl https://raw.githubusercontent.com/tesserax-arena/docs/main/content/guides/for-agents.md
 ```
 
 ---

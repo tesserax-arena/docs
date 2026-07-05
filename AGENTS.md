@@ -11,7 +11,7 @@
 ## Directory map
 
 ```
-tesserax-docs/
+docs/
  content/
     .vitepress/           # Config (config.ts), theme (custom.css)
     index.md              # Docs home
@@ -23,7 +23,7 @@ tesserax-docs/
  package.json              # VitePress scripts
  CHANGELOG.md              # Version history
  llms.txt                  # Agent discovery
- .cursor/skills/tesserax-docs/SKILL.md
+ .cursor/skills/docs/SKILL.md
 ```
 
 ## Workflow checklist

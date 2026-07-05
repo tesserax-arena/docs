@@ -24,8 +24,8 @@ llms.txt                Agent discovery document
 
 ```bash
 # As standalone repo
-git clone https://github.com/tesserax-arena/tesserax-docs.git
-cd tesserax-docs
+git clone https://github.com/tesserax-arena/docs.git
+cd docs
 npm install
 npm run dev                     # http://localhost:5173
 
