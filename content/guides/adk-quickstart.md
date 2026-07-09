@@ -8,11 +8,9 @@ the answer.
 ## Install
 
 ```bash
-uv tool install tesserax     # recommended
-# or
-pipx install tesserax
+uv tool install git+https://github.com/tesserax-arena/adk     # recommended (PyPI name tesserax is taken)
 # or one-shot:
-uvx tesserax --help
+uvx --from git+https://github.com/tesserax-arena/adk tesserax --help
 ```
 
 ## One-command setup
