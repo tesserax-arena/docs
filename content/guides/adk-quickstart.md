@@ -8,9 +8,12 @@ the answer.
 ## Install
 
 ```bash
-uv tool install tesserax-adk  # or: uv tool install git+https://github.com/tesserax-arena/adk     # recommended (PyPI name tesserax is taken)
-# or one-shot:
-uvx --from tesserax-adk tesserax --help  # or: uvx --from git+https://github.com/tesserax-arena/adk tesserax --help
+# Package name is tesserax-adk (CLI is still `tesserax`). Bare PyPI name "tesserax" is unrelated.
+uv tool install tesserax-adk
+# Until PyPI publish, or always:
+# uv tool install git+https://github.com/tesserax-arena/adk
+# One-shot:
+# uvx --from tesserax-adk tesserax --help
 ```
 
 ## One-command setup
