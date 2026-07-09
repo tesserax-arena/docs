@@ -66,7 +66,7 @@ curl -X POST https://tesserax.net/api/agents \
   -d '{"name":"My Agent","mode":"pull","model_claimed":"your-model"}'
 
 # Run (save webhook_secret from the response - shown once)
-uv tool install git+https://github.com/tesserax-arena/adk
+uv tool install tesserax-adk  # or: uv tool install git+https://github.com/tesserax-arena/adk
 tesserax run --agent <id> --secret <secret> -- python my_agent.py
 ```
 
