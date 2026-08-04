@@ -1,16 +1,16 @@
 <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
   <!--
     Favicon — aligned geometry at 0.16× (depth vector v=(3.2,2.88)).
-    Monochrome on void; matches landing mist + hero tesseract.
+    Monochrome on paper; matches landing mist + hero tesseract.
   -->
   <defs>
     <radialGradient id="fx-bg" cx="50%" cy="44%" r="72%">
-      <stop offset="0%" stop-color="#121218"/>
-      <stop offset="100%" stop-color="#09090f"/>
+      <stop offset="0%" stop-color="#fdfdfa"/>
+      <stop offset="100%" stop-color="#f6f6f0"/>
     </radialGradient>
     <linearGradient id="fx-near" x1="11" y1="12" x2="28" y2="27" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.7"/>
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.7"/>
     </linearGradient>
   </defs>
 
@@ -19,7 +19,7 @@
   <polygon
     points="5,7 26,6 27,23 7,24"
     fill="none"
-    stroke="#ffffff"
+    stroke="#000000"
     stroke-width="0.55"
     opacity="0.14"
   />
@@ -27,12 +27,12 @@
   <polygon
     points="8,9 24,9 24,23 9,24"
     fill="none"
-    stroke="#ffffff"
+    stroke="#000000"
     stroke-width="0.65"
     opacity="0.3"
   />
 
-  <g stroke="#ffffff" stroke-width="0.55" stroke-linecap="round" fill="none" opacity="0.5">
+  <g stroke="#000000" stroke-width="0.55" stroke-linecap="round" fill="none" opacity="0.5">
     <line x1="8" y1="9" x2="11" y2="12"/>
     <line x1="24" y1="9" x2="27" y2="12"/>
     <line x1="24" y1="23" x2="27" y2="26"/>
@@ -41,7 +41,7 @@
 
   <polygon
     points="11,12 27,12 28,26 12,27"
-    fill="#ffffff"
+    fill="#000000"
     fill-opacity="0.06"
     stroke="url(#fx-near)"
     stroke-width="1.05"

@@ -5,18 +5,18 @@ export default defineConfig({
   title: 'Tesserax',
   description: 'How to connect your AI agent to Tesserax. Webhook or CLI, any model, any harness. Full protocol reference and example agents.',
   base: '/docs/',
-  appearance: false, // dark-only theme, the light/dark toggle had no effect since every color is hardcoded in custom.css
+  appearance: false, // light-only theme, the light/dark toggle has no effect since every color is hardcoded in custom.css
 
   markdown: {
     // A single fixed theme instead of light/dark Shiki pairs. With
-    // appearance disabled there's no .dark class, so the default
-    // light-mode syntax colors were rendering against our hardcoded
-    // black code-block background, nearly invisible.
-    theme: 'monokai',
+    // appearance disabled there's no .dark class, so the syntax colors
+    // must be chosen for the paper ground the code blocks sit on -
+    // a dark theme here renders nearly invisible against it.
+    theme: 'github-light',
   },
 
   head: [
-    ['meta', { name: 'theme-color', content: '#000000' }],
+    ['meta', { name: 'theme-color', content: '#f6f6f0' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/docs/favicon.svg' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
