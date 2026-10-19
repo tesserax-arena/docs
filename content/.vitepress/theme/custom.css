@@ -1,89 +1,84 @@
-/* ─── Tesserax Void Theme: full black ground, white/grey text, retro neon accents ─── */
+/* ─── Tesserax docs: the Index design language ───
+   Swiss-editorial on black, matching the main site: Geist in sentence case
+   with tight tracking for headings, Geist Mono for code and labels, 1px
+   hairlines for structure, white and greys for text. Colour is kept for
+   meaning only - the callout kinds - never for decoration. */
 
 :root {
-  /* Neon accents (shared with the main site) */
   --neon-cyan: #19f0ff;
   --neon-magenta: #ff2fd1;
-  --neon-violet: #8b5cff;
   --neon-lime: #a8ff3e;
   --neon-amber: #ffb627;
 
+  --ink: #f2f3f5;
+  --ink-muted: #a3a7ae;
+  --ink-dim: #8a8f98;
+  --line: rgba(255, 255, 255, 0.10);
+  --line-strong: rgba(255, 255, 255, 0.18);
+  --surface: #060708;
+  --surface-2: #16181b;
+
   --vp-c-bg: #000000;
-  --vp-c-bg-alt: #050505;
-  --vp-c-bg-elv: #080808;
-  --vp-c-bg-soft: #0a0a0a;
-  --vp-c-text: rgba(255, 255, 255, 0.92);
-  --vp-c-text-1: rgba(255, 255, 255, 0.92);
-  --vp-c-text-2: rgba(255, 255, 255, 0.72);
-  --vp-c-text-3: rgba(255, 255, 255, 0.55);
-  --vp-c-text-muted: rgba(255, 255, 255, 0.68);
-  --vp-c-border: rgba(255, 255, 255, 0.12);
-  --vp-c-divider: rgba(255, 255, 255, 0.08);
-  --vp-c-gutter: rgba(255, 255, 255, 0.05);
+  --vp-c-bg-alt: #000000;
+  --vp-c-bg-elv: #060708;
+  --vp-c-bg-soft: #060708;
+  --vp-c-text-1: var(--ink);
+  --vp-c-text-2: var(--ink-muted);
+  --vp-c-text-3: var(--ink-dim);
+  --vp-c-border: var(--line-strong);
+  --vp-c-divider: var(--line);
+  --vp-c-gutter: var(--line);
 
-  --vp-c-brand: var(--neon-cyan);
-  --vp-c-brand-1: var(--neon-cyan);
-  --vp-c-brand-2: var(--neon-magenta);
-  --vp-c-brand-3: var(--neon-violet);
-  --vp-c-brand-soft: rgba(25, 240, 255, 0.12);
-  --vp-c-brand-light: var(--neon-cyan);
-  --vp-c-brand-lighter: var(--neon-cyan);
-  --vp-c-brand-dark: var(--neon-violet);
-  --vp-c-brand-darker: var(--neon-violet);
+  /* The "brand" is white: links, active items and buttons are ink, not neon. */
+  --vp-c-brand-1: var(--ink);
+  --vp-c-brand-2: #d6d8dc;
+  --vp-c-brand-3: #d6d8dc;
+  --vp-c-brand-soft: rgba(255, 255, 255, 0.08);
 
-  --vp-c-default-1: rgba(255, 255, 255, 0.12);
-  --vp-c-default-2: rgba(255, 255, 255, 0.08);
+  --vp-c-default-1: var(--line-strong);
+  --vp-c-default-2: var(--line);
   --vp-c-default-3: rgba(255, 255, 255, 0.05);
   --vp-c-default-soft: rgba(255, 255, 255, 0.04);
-  --vp-c-gray-1: #333;
-  --vp-c-gray-2: #222;
-  --vp-c-gray-3: #111;
   --vp-c-gray-soft: rgba(255, 255, 255, 0.04);
-  --vp-c-indigo-1: var(--neon-violet);
-  --vp-c-indigo-2: var(--neon-violet);
-  --vp-c-indigo-3: var(--neon-violet);
-  --vp-c-indigo-soft: rgba(139, 92, 255, 0.14);
-  --vp-c-mute: rgba(255, 255, 255, 0.04);
-  --vp-c-mute-hover: rgba(255, 255, 255, 0.08);
 
   --vp-c-tip-1: var(--neon-cyan);
-  --vp-c-tip-soft: rgba(25, 240, 255, 0.07);
-  --vp-c-note-1: var(--neon-violet);
-  --vp-c-note-soft: rgba(139, 92, 255, 0.08);
-  --vp-c-important-1: var(--neon-violet);
-  --vp-c-important-soft: rgba(139, 92, 255, 0.08);
+  --vp-c-tip-soft: rgba(255, 255, 255, 0.03);
+  --vp-c-note-1: var(--ink-muted);
+  --vp-c-note-soft: rgba(255, 255, 255, 0.03);
+  --vp-c-important-1: var(--ink);
+  --vp-c-important-soft: rgba(255, 255, 255, 0.03);
   --vp-c-success-1: var(--neon-lime);
-  --vp-c-success-soft: rgba(168, 255, 62, 0.07);
+  --vp-c-success-soft: rgba(255, 255, 255, 0.03);
   --vp-c-warning-1: var(--neon-amber);
-  --vp-c-warning-soft: rgba(255, 182, 39, 0.08);
+  --vp-c-warning-soft: rgba(255, 255, 255, 0.03);
   --vp-c-danger-1: var(--neon-magenta);
-  --vp-c-danger-soft: rgba(255, 47, 209, 0.08);
+  --vp-c-danger-soft: rgba(255, 255, 255, 0.03);
 
-  --vp-button-brand-bg: transparent;
-  --vp-button-brand-border: var(--neon-cyan);
-  --vp-button-brand-text: var(--neon-cyan);
-  --vp-button-brand-hover-bg: rgba(25, 240, 255, 0.1);
-  --vp-button-brand-hover-border: var(--neon-magenta);
-  --vp-button-brand-hover-text: var(--neon-magenta);
-  --vp-button-brand-active-bg: rgba(255, 47, 209, 0.12);
-  --vp-button-brand-active-border: var(--neon-magenta);
-  --vp-button-brand-active-text: var(--neon-magenta);
+  --vp-button-brand-bg: var(--ink);
+  --vp-button-brand-border: var(--ink);
+  --vp-button-brand-text: #000000;
+  --vp-button-brand-hover-bg: #d6d8dc;
+  --vp-button-brand-hover-border: #d6d8dc;
+  --vp-button-brand-hover-text: #000000;
+  --vp-button-brand-active-bg: #d6d8dc;
+  --vp-button-brand-active-border: #d6d8dc;
+  --vp-button-brand-active-text: #000000;
 
-  --vp-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --vp-font-family-mono: "JetBrains Mono", monospace;
+  --vp-font-family-base: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --vp-font-family-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  --vp-code-color: var(--neon-lime);
-  --vp-code-bg: rgba(255, 255, 255, 0.05);
-  --vp-code-copy-code-bg: rgba(255, 255, 255, 0.06);
-  --vp-code-copy-code-hover-bg: rgba(255, 255, 255, 0.1);
-  --vp-code-block-bg: #050505;
-  --vp-code-tab-divider: rgba(255, 255, 255, 0.08);
+  --vp-code-color: var(--ink);
+  --vp-code-bg: var(--surface-2);
+  --vp-code-copy-code-bg: var(--surface-2);
+  --vp-code-copy-code-hover-bg: #22252a;
+  --vp-code-block-bg: var(--surface);
+  --vp-code-tab-divider: var(--line);
   --vp-code-line-highlight-color: rgba(255, 255, 255, 0.04);
 
-  --vp-custom-block-font-size: 0.9rem;
+  --vp-custom-block-font-size: 0.92rem;
   --vp-custom-block-code-font-size: 0.85rem;
 
-  --vp-home-hero-name-color: var(--neon-cyan);
+  --vp-home-hero-name-color: var(--ink);
   --vp-home-hero-name-background: transparent;
   --vp-home-hero-image-background-image: none;
   --vp-home-hero-image-filter: none;
@@ -103,76 +98,156 @@ body,
   background-color: #000000;
 }
 
+body {
+  font-feature-settings: "ss01";
+}
+
 ::selection {
-  background: var(--neon-magenta);
+  background: var(--ink);
   color: #000000;
 }
 
-.VPSidebar {
-  background-color: #050505 !important;
-  border-right: 0.5px solid rgba(255, 255, 255, 0.08) !important;
-}
-
-.VPSidebarItem .text {
-  color: var(--vp-c-text-2);
-}
-
-.VPSidebarItem .item:hover .text {
-  color: var(--neon-magenta);
-}
-
-.VPSidebarItem.is-active > .item .text {
-  color: var(--neon-cyan);
-}
-
-.VPSidebarItem.is-active > .item .indicator {
-  background-color: var(--neon-cyan);
+/* ─── Chrome ─── */
+.VPNavBar,
+.VPNavBar.has-sidebar .content,
+.VPNavBar .divider-line {
+  background-color: #000000 !important;
 }
 
 .VPNavBar {
-  background-color: #000000 !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-bottom: 1px solid var(--line) !important;
 }
 
-.VPNavBar .logo {
-  filter: none;
+.VPNavBarTitle .title {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.VPNavBarMenuLink {
+  color: var(--ink-muted) !important;
+  font-weight: 400 !important;
 }
 
 .VPNavBarMenuLink:hover,
 .VPNavBarMenuLink.active {
-  color: var(--neon-cyan) !important;
+  color: var(--ink) !important;
 }
 
-a {
-  color: var(--neon-cyan);
+.VPSidebar {
+  background-color: #000000 !important;
+  border-right: 1px solid var(--line) !important;
+}
+
+.VPSidebarItem.level-0 > .item .text {
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--ink-dim);
+}
+
+.VPSidebarItem .text {
+  color: var(--ink-muted);
+}
+
+.VPSidebarItem .item:hover .text {
+  color: var(--ink);
+}
+
+.VPSidebarItem.is-active > .item .text {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.VPSidebarItem.is-active > .item .indicator {
+  background-color: var(--ink);
+}
+
+.VPDocAsideOutline .outline-title {
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--ink-dim);
+}
+
+.VPDocAsideOutline .outline-link.active {
+  color: var(--ink);
+}
+
+.DocSearch-Button {
+  background: #000000 !important;
+  border: 1px solid var(--line-strong) !important;
+}
+
+.DocSearch-Button:hover {
+  border-color: var(--ink) !important;
+}
+
+/* ─── Article ─── */
+.vp-doc a {
+  color: var(--ink);
   font-weight: 500;
   text-decoration: underline;
-  text-underline-offset: 2px;
-  text-decoration-color: rgba(25, 240, 255, 0.35);
-  transition: color 0.15s, text-decoration-color 0.15s;
-}
-
-a:hover {
-  color: var(--neon-magenta);
-  text-decoration-color: var(--neon-magenta);
-}
-
-.vp-doc a {
-  color: var(--neon-cyan);
+  text-underline-offset: 3px;
+  text-decoration-color: var(--line-strong);
+  transition: text-decoration-color 0.15s;
 }
 
 .vp-doc a:hover {
-  color: var(--neon-magenta);
+  color: var(--ink);
+  text-decoration-color: var(--ink);
+}
+
+.vp-doc p,
+.vp-doc li {
+  color: var(--ink-muted);
+  line-height: 1.7;
+}
+
+.vp-doc strong {
+  color: var(--ink);
+}
+
+.vp-doc h1 {
+  color: var(--ink);
+  font-size: 2.6rem;
+  line-height: 1.05;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.vp-doc h2 {
+  color: var(--ink);
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  border-top: 1px solid var(--line-strong);
+  padding-top: 1.5rem;
+  margin-top: 3rem;
+}
+
+.vp-doc h3 {
+  color: var(--ink);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.vp-doc .header-anchor {
+  color: var(--ink-dim);
 }
 
 .vp-doc div[class*='language-'] {
-  background: #050505;
-  border: 0.5px solid rgba(255, 255, 255, 0.1);
-  border-left: 2px solid var(--neon-violet);
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+}
+
+.vp-doc div[class*='language-'] > span.lang {
+  font-family: var(--vp-font-family-mono);
+  color: var(--ink-dim);
 }
 
 .vp-doc :not(pre) > code {
-  color: var(--neon-lime);
+  color: var(--ink);
+  background: var(--surface-2);
 }
 
 .vp-doc a > code {
@@ -185,90 +260,95 @@ a:hover {
 
 .vp-doc div[class*='language-'] .copy:hover {
   opacity: 1;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.vp-doc h1 {
-  color: #ffffff;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-.vp-doc h2 {
-  color: #ffffff;
-  font-weight: 600;
-  border-top: 0.5px solid rgba(139, 92, 255, 0.35);
-  padding-top: 1.5rem;
-  margin-top: 2.5rem;
-}
-
-.vp-doc h3 {
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 600;
-}
-
-.vp-doc .header-anchor {
-  color: var(--neon-magenta);
-}
-
-.custom-block {
-  background-color: rgba(255, 255, 255, 0.02) !important;
-  border-left: 2px solid var(--neon-cyan);
-}
-
-.custom-block.warning {
-  border-left-color: var(--neon-amber);
-}
-
-.custom-block.danger {
-  border-left-color: var(--neon-magenta);
-}
-
-.VPFooter {
-  border-top: 0.5px solid rgba(255, 255, 255, 0.08);
-  background-color: #000000 !important;
-}
-
-.VPFooter .copyright {
-  color: var(--vp-c-text-3);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.DocSearch-Button {
-  background: rgba(255, 255, 255, 0.04) !important;
-  border: 0.5px solid rgba(255, 255, 255, 0.1) !important;
-}
-
-.DocSearch-Button:hover {
-  border-color: var(--neon-cyan) !important;
 }
 
 .vp-doc table {
   border-collapse: collapse;
+  display: table;
+  width: 100%;
+}
+
+.vp-doc tr {
+  background: transparent !important;
+  border-top: 1px solid var(--line);
 }
 
 .vp-doc th,
 .vp-doc td {
-  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 0.7rem 1rem 0.7rem 0;
 }
 
 .vp-doc th {
-  background: rgba(255, 255, 255, 0.03);
-  color: #ffffff;
+  background: transparent;
+  color: var(--ink-dim);
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  border-bottom-color: var(--line-strong);
 }
 
 .vp-doc tr:hover td {
-  background: rgba(25, 240, 255, 0.03);
+  background: rgba(255, 255, 255, 0.02);
 }
 
+/* Callouts: one coloured edge says which kind it is; the box is quiet. */
+.custom-block {
+  background-color: var(--surface) !important;
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--ink-dim);
+}
+
+.custom-block .custom-block-title {
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--ink-dim);
+}
+
+.custom-block.tip { border-left-color: var(--neon-cyan); }
+.custom-block.warning { border-left-color: var(--neon-amber); }
+.custom-block.danger { border-left-color: var(--neon-magenta); }
+.custom-block p { color: var(--ink-muted); }
+
 .vp-doc blockquote {
-  border-left: 2px solid var(--neon-amber);
-  color: var(--vp-c-text-2);
+  border-left: 1px solid var(--line-strong);
+  color: var(--ink-muted);
 }
 
 .vp-doc hr {
-  border-top: 0.5px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--line);
+}
+
+/* Prev / next */
+.VPDocFooter .pager-link {
+  border: 1px solid var(--line);
+  background: #000000;
+}
+
+.VPDocFooter .pager-link:hover {
+  border-color: var(--line-strong);
+}
+
+.VPDocFooter .desc {
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.72rem;
+  color: var(--ink-dim);
+}
+
+.VPDocFooter .title {
+  color: var(--ink);
+}
+
+.VPFooter {
+  border-top: 1px solid var(--line);
+  background-color: #000000 !important;
+}
+
+.VPFooter .copyright,
+.VPFooter .message {
+  color: var(--ink-dim);
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.72rem;
 }
