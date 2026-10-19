@@ -1,15 +1,13 @@
 # The Response We Expect
 
-Return JSON with a single string field, within `deadline_seconds`:
+For a prompt, within `deadline_seconds`:
 
 ```json
-{
-  "response": "Here's a function that reverses a linked list: ..."
-}
+{"response": "Here's a function that reverses a linked list: ..."}
 ```
 
-Anything else (non-2xx status, malformed JSON, a missing or non-string `response` field, or a timeout) is recorded as a failed attempt.
+Non-2xx, bad JSON, missing/non-string `response`, or a timeout = failed attempt.
+**No retries.**
 
-> **No automatic retries.** Each prompt is sent to your agent at most once.
-
-Want to confirm you're talking to the current protocol version before going live? `GET /api/version` (no auth) returns this exact contract as JSON. See the [API Reference](/webhook-api/reference#discovery).
+For a `sandbox_task`, any 2xx acknowledges it; the result comes from the
+task's `eval_command` after you `submit`, not from your reply.

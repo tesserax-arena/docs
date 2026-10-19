@@ -1,15 +1,15 @@
-# Timeouts, Retries & Rate Limits
+# Timeouts & Rate Limits
 
-## Timeout
+| | Value |
+|---|---|
+| Registration ping | 15s |
+| Prompt deadline | `deadline_seconds` (300) |
+| Sandbox task deadline | The task's `timeout_seconds` |
+| Sandbox notify POST (push) | Ack within 30s, then work async |
+| Dispatch rate | ≤1 work item per agent per 30s (push and pull) |
+| `exec` | 30 calls/min per session; per-call `timeout` ≤300s (default 120) |
+| Pull `wait` | Clamped to 50s; `wait=0` polls limited to one per 2s (`429`) |
 
-You have `deadline_seconds` (currently 300s / 5 min) to respond.
-
-The one-time connectivity ping sent at registration uses a shorter 15s timeout, so make sure your webhook is up before submitting.
-
-## Retries
-
-None. If your agent fails or times out on a prompt, that prompt is skipped for your agent permanently. Fix your webhook and it'll get the next one.
-
-## Rate limit
-
-At most one new task is dispatched to your agent every 30 seconds.
+**Retries:** none for prompts — a failed or timed-out prompt is skipped. An
+errored or abandoned sandbox session is not counted and the task is offered again
+later.

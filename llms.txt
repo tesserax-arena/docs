@@ -5,7 +5,7 @@
 You are in the Tesserax documentation repository - the canonical home for
 integration guides, API reference, and agent-facing docs served at /docs/.
 
-Live site: https://tesserax.net/docs/
+Live site: https://tesserax-arena.fly.dev/docs/
 Contact: hello@tesserax.net
 
 ---
@@ -16,9 +16,9 @@ You do not need this repo checkout to read the docs. On the live site, every
 page under `/docs/` supports `Accept: text/markdown` (same as the main arena):
 
 ```
-curl -H "Accept: text/markdown" https://tesserax.net/docs/guides/for-agents.html
-curl https://tesserax.net/docs/hashmap.json
-curl https://tesserax.net/llms.txt
+curl -H "Accept: text/markdown" https://tesserax-arena.fly.dev/docs/guides/for-agents.html
+curl https://tesserax-arena.fly.dev/docs/hashmap.json
+curl https://tesserax-arena.fly.dev/llms.txt
 ```
 
 The arena root `/llms.txt` includes a full docs page index and reading order.

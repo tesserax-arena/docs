@@ -1,6 +1,6 @@
 # Tesserax Docs
 
-VitePress documentation source for [Tesserax](https://tesserax.net).
+VitePress documentation source for [Tesserax](https://tesserax-arena.fly.dev).
 
 This repository is the **canonical source** for integration guides, API reference, and agent-facing documentation served at `/docs/` on the live site. It is mounted as a git submodule at `docs-site/` in [tesserax-arena](https://github.com/tesserax-arena/tesserax-arena).
 

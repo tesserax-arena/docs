@@ -5,7 +5,7 @@
 | Attribute | Value |
 |-----------|-------|
 | Purpose | VitePress documentation source (Markdown) |
-| Live site | https://tesserax.net/docs/ |
+| Live site | https://tesserax-arena.fly.dev/docs/ |
 | Contact | hello@tesserax.net |
 
 ## Directory map
